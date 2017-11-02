@@ -1,0 +1,91 @@
+/**
+	Notes:
+	* I like to write the comment in css like this way
+	* Css external file is the best way to save your efforts and be organized
+	* (added) means this comment is added only for you, my copy don't include it
+*/
+
+/** (added) this is the link to add a font you love but you want all users see the same font in their devices / browsers */
+@import url('https://fonts.googleapis.com/css?family=Ralway');
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+
+/** (added) tells the browser that I want the body to be flexible to different screen sizes */
+html, body {
+	margin: 0; /** (added) this is important in the web design, I don't want to default margin */
+	padding: 0; /** (added) this is important in the web design, I don't want to default padding */
+	width: 100%; /** (added) make the body and html sections / elements to be 100% in width */
+	height: 100%; /** (added) make the body and html sections / elements to be 100% in height */
+}
+
+.intro {
+	width: 100%; /** (added) I want the father container to be 100% of the screen size */
+	height: 100%;
+	margin: auto;
+	background: url('../images/109-Pizza.jpg') no-repeat 50% 50%; /** (added) to make margin and compress the image from top right bottom left */
+	display: table; /** (added) let the image to be like the table */
+	background-size: cover; /** (added) let the image covers the intro div / container */
+	top: 0; /** (added) no paddings, margins from the top */
+}
+
+.intro .inner {
+	background-color: rgba(0, 0, 0, 0.7); /** (added) RGBa: Red Green Blue Alpha, a is for the transparency */
+	display: table-cell; /** (added) let the content of inner be like the table cells */
+	vertical-align: middle; /** (added) make the content in the middle of the screen */
+	width: 100%;
+	max-width: none; /** (added) to look good for different screens */
+}
+
+.content {
+	max-width: 500px; /** (added) try to put background color and see the difference */
+	margin: 0 auto; /** (added) put the content in the middle, no margins added */
+	text-align: center;
+}
+
+.content h1 {
+	font-family: 'Ralway', sans-serif; /** (added) imports the font from the web, if the user's browser doesn't support this font, choose any font from sans-serif fonts */
+	color: rgba(256, 256, 256, .5); /**#f9f3f4*/;
+	text-shadow: 0px 0px 300px #000; /** (added) to make shadow for the text */
+	font-size: 500%; /** (added) better for responsive designs */
+}
+
+.btn {
+	border-radius: 9px;
+	font-family: 'Oswald', sans-serif;
+	color: #0ffa81;
+	font-size: 135%;
+	padding: 10px 20px;
+	border: 3px solid #0ffa81;
+	text-transform: uppercase; /** (added) make all letters capital letters */
+	text-decoration: none;
+}
+
+.btn:hover { /** (added) what's happening when I stopped over the elements using mouse */
+	color: #fff;
+	border: 3px solid #fff;
+}
+
+p {
+	text-indent: 50px; /** (added) the space omitted when I write the paragraph */
+	font-size: 130%;
+	line-height: 160%; /** (added) the space between lines in a single paragraph */
+	text-align: justify;
+	margin: 3%;
+	font-family: sans-serif;
+}
+
+/** (added) Choose any screen size which might have the maximum width of 768px and apply different style for the document elements */
+@media screen and (max-width: 768px) { /** (added) media selector is opened */
+	.content h1 { /** (added) first selector that will have a different style */
+		font-size: 250%;
+	}
+
+	.btn { /** (added) second */
+		font-size: 110%;
+		padding: 7px 15px;
+	}
+
+	p { /** (added) third */
+		font-size: 100%;
+		line-height: 125%;
+	}
+} /** (added) media selector is closed */
